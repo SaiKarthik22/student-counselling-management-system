@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Arial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap");
+
+@layer html {
+  :root {
+    --toastify-color-light: #ff6347;
+    --toastify-text-color-light: #2f4f4f;
+  }
+
+  input,
+  select,
+  textarea {
+    background-color: transparent;
+    display: block;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .select-img {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-position: center right 1px;
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+  }
+
+  .radio:has(input:checked) {
+    color: #70b44676;
+    font-weight: italic;
+  }
+
+  select:disabled {
+    background-image: none;
+  }
+
+  .outlet-border {
+    border-color: #83138b60;
+    border-width: 4px;
+    border-radius: 0.75rem;
+  }
+
+  #nav a.active {
+    background-color: #b29c2014;
+    border-radius: 0.375rem;
+  }
+
+  #register a.active {
+    color: #008b4f6b !important;
+  }
+
+  #resister #root .toast {
+    color: #49e22bb2 !important;
+  }
+  #root .toast-body {
+    color: #4ce22bac !important;
+  }
+  #root .toast-rounded {
+    border-radius: 6px !important;
+    background-color: #00fa9a !important;
+  }
+
+  .scrollWidth::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .scrollWidth {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* #root .toast-progress {
+    background: #9932cc !important;
+  } */
+
+  @media (prefers-color-scheme: dark) {
+    #nav a.active {
+      background-color: #3e4f2fb7;
+      border-radius: 0.375rem;
+    }
+    #register a.active {
+      color: #20b2aa;
+    }
+    option {
+      background-color: #808080;
+      color: #ff6347;
+    }
+    #root .toast {
+      color: #00fa9a !important;
+    }
+    #root .toast-body {
+      color: #00fa9a !important;
+    }
+    #root .toast-rounded {
+      border-radius: 6px !important;
+      background-color: #2be256a4 !important;
+    }
+  }
+}
